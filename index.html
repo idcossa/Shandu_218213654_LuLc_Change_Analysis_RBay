@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shandu-GIS</title>
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+    
+<!-- header section starts  -->
+
+<header class="header">
+
+    <a href="#" class="logo">
+        <img src="logo/Shandu.jpg" alt="Doctor Shandu">
+    </a>
+
+    <nav class="navbar">
+        <a href="index.html">Home</a>  
+        <!--<a href="https://idcossa.github.io/GEOG7029_SA_Mapping/" target="_blank">SA: Web Map</a> -->
+        
+        
+    </nav>
+
+    <div class="icons">
+        <div class="fas fa-search" id="search-btn"></div>
+        <!--<div class="fas fa-shopping-cart" id="cart-btn"></div> REMOVE--> 
+        <div class="fas fa-bars" id="menu-btn"></div>
+    </div>
+
+ 
+
+</header>
+
+<!-- header section ends -->
+
+<!-- home section starts  -->
+
+
+<section class="home" id="home">
+
+    <div class="content">      
+
+        
+    </div>    
+
+</section>
+
+
+<!-- home section ends -->
+
+<!-- reviews section starts  -->
+
+<section class="blogs" id="blogs">
+    <h1 class="heading"><span> Land Use and Land Cover Change Analysis Based on Naïve Bayes Machine Learning Algorithm, Richards Bay </span> South Africa</h1>
+    <h1 class="heading"> GIS Industrial Project <span>CPUT </span> </h1>
+    
+    <!--<h1 class="heading"> Study finding <span>Appendix</span> </h1>-->
+    <p class="heading">
+        <a href="https://code.earthengine.google.com/?accept_repo=users/idcossa/GEOG7044_Mini_Project" target="_blank"> Google Earth Engine Code</a> 
+    </p>
+    
+
+    <div class="box-container">
+        <!--ISSUE KZN-->
+      <div class="box">
+        <div class="image">
+            <img src="Images/Workflow.png" alt="">
+        </div>
+        <div class="content">
+            <a href="#" class="title">Study WorkFlow</a>
+            <span> </span>
+            <p> Data was introduced in GEE using code fetch Landsat Image. Landsat 5 data used to produce 1985 and 1995 images, Landsat 8 used to produce 2015 and 2021 images. Figure shows the workflow followed in this study to model the LULC change. Landsat 5 and Landsat 8 data was used to model LULC change from 1985 to 2021. GEE platform covers a variety of data processing methods: These methods are mainly categorised into at-sensor Spectral Radiance, TOA Reflectance and SR. For each satellite USGC product based on the quality are grouped on Real-Time (RT), Tier 1 and Tier 2.
+                Tier 1: is the most accurate product and best for candidate for series analysis process.
+                </p>
+            
+            <a href="Images/Workflow.png" target="_blank" class="btn">View</a>
+        </div>
+     </div>
+
+       <!--ISSUE KZN-->
+       <div class="box">
+        <div class="image">
+            <img src="Images/Enhancement.png" alt="">
+        </div>
+        <div class="content">
+            <a href="#" class="title">Enhancement</a>
+            <span> </span>
+            <p> Figure shows the screen short image of the true and colour composite for Landsat 5 and 8 for 1985, 1995, 2015 and 2021. The composite was used to visual analyse the image and to identify the sample that belongs to each class during training and validation points sampling. The false colour composite incorporate NIR, Red and Green which is Bands B4, B3 and B2 for Landsat 5 and B5, B4 and B3 for Landsat 8 respectively.</p>
+            <a href="Images/Enhancement.png" target="_blank" class="btn">View</a>
+        </div>
+     </div>
+      
+      
+    </div>
+
+
+
+
+    <div class="box-container">
+        <!--ISSUE KZN-->
+        <div class="box">
+            <div class="image">
+                <img src="Images/ndvi.jpg" alt="">
+            </div>
+            <div class="content">
+                <a href="#" class="title">NDVI</a>
+                <span> </span>
+                <p> NDVI =  (NIR-Red)/(NIR+Red). Since the heather vegetation absorbs EM radiation in visible portion of the spectrum mainly in Red and blue, and reflect in Green and NIR, NDVI uses NIR which is strongly reflected and Red which is strongly absorbed. NDVI was employed to visually differentiate the spectral significance in vegetation cover across the study region. It can be analysed from an image that as the level change from 0 to 1 the greener the vegetation and opposite is true where build up areas are around about 0 and water such as sea has greater negative index which indicate the absence of vegetation; however, some water may indicate the concentration of NDVI, and this is caused by the presence of algae in the water.   </p>
+                <a href="Images/ndvi.jpg" target="_blank" class="btn">View</a>
+            </div>
+        </div>
+
+    <div class="box">
+        <div class="image">
+            <img src="Images/ndwi.jpg" alt="">
+        </div>
+        <div class="content">
+            <a href="#" class="title">Index Calculation</a>
+            <span> </span>
+            <p> NDWI=  (NIR-SWIR)/(NIR+SWIR). NDWI is used to enhance water bodies in most cases. Water has low reflectance and decreases from visible portion of spectrum. NDWI and MNDWI are widely used to highlight water.   </p>
+            <a href="Images/ndwi.jpg" target="_blank" class="btn">View</a>
+        </div>
+    </div>
+
+    </div>
+    
+    <div class="box-container">
+      
+
+        <div class="box">
+            <div class="image">
+                <img src="Images/mndwi.jpg" alt="">
+            </div>
+            <div class="content">
+                <a href="#" class="title">Classification</a>
+                <span> </span>
+                <p> MNDWI=  (Green-SWIR)/(Green+SWIR). There is differentiated phenomenon between NDWI and MNDWI where MNDWI strongly highlight water than NDWI. NDWI produces poor quality results hence using MNDWI can benefit the analysis. </p>
+                <a href="Images/mndwi.jpg" target="_blank" class="btn">View</a>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="image">
+                <img src="Images/training_testing_data.jpg" alt="">
+            </div>
+            <div class="content">
+                <a href="#" class="title">Randmoised Training and Testing Data</a>
+                <span> </span>
+                <p>  Training and Validation samples were collected based on Visual Interpretation Method and were separately selected. Figure show the distribution of Training and Testing Samples across the study region. The spectral reflectance of Bands in an image were important in identify the samples that belong to one class. </p>
+                <a href="Images/training_testing_data.jpg" target="_blank" class="btn">View</a>
+            </div>
+        </div>
+       
+
+    </div>
+    <div class="box-container">
+        <div class="box">
+            <div class="image">
+                <img src="Images/2021Signatures.png" alt="">
+            </div>
+            <div class="content">
+                <a href="#" class="title">2021 Image and Spectral Signatures</a>
+                <span> </span>
+                <p>  </p>
+                <a href="Images/2021Signatures.png" target="_blank" class="btn">View</a>
+            </div>
+        </div>
+            <div class="box">
+                <div class="image">
+                    <img src="Images/2015Signatures.png" alt="">
+                </div>
+                <div class="content">
+                    <a href="#" class="title">2015 Image and Spectral Signatures</a>
+                    <span> </span>
+                    <p>  </p>
+                    <a href="Images/2015Signatures.png" target="_blank" class="btn">View</a>
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="image">
+                    <img src="Images/1995Signatures.png" alt="">
+                </div>
+                <div class="content">
+                    <a href="#" class="title">1995 Image and Spectral Signatures</a>
+                    <span> </span>
+                    <p>  </p>
+                    <a href="Images/1995Signatures.png" target="_blank" class="btn">View</a>
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="image">
+                    <img src="Images/1985Signatures.png" alt="">
+                </div>
+                <div class="content">
+                    <a href="#" class="title">1985 Image and Spectral Signatures</a>
+                    <span> </span>
+                    <p>  </p>
+                    <a href="Images/1985Signatures.png" target="_blank" class="btn">View</a>
+                </div>
+            </div>
+    
+        
+
+    </div>
+
+
+    <div class="box-container">
+        <div class="box">
+            <div class="image">
+                <img src="Images/trainingtest_table.JPG" alt="">
+            </div>
+            <div class="content">
+                <a href="#" class="title">Training and Testing Points</a>
+                <span> </span>
+                <p> In all instances, the validation samples were sampled to be less than the training the samples. Point method of delineating a correspondent pixel was employed, the number of points represent the number of pixel collected for each sample class group per year of analysis. </p>
+                <a href="Images/trainingtest_table.JPG" target="_blank" class="btn">View</a>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="image">
+                <img src="Images/classified.jpg" alt="">
+            </div>
+            <div class="content">
+                <a href="#" class="title">Classified Image</a>
+                <span> </span>
+                <p> Figure show the classified images from 1985, 1995, 2015 and 2021 using Naïve Bayes ML Algorithm in GEE. It can be visual seen that there is a change of soil, cultivation, urban, forest and agriculture due to development. The rate of change of cultivation changes the appearance of agricultural areas including cultivation or deforestation. Around the port of Richards’ bay we can observed the sudden development and build up area from 1985 to 2021, this is due to industrial development and migration. There is a change in the soil (sea sand) which is seemed to be influence by forest and agricultural areas.</p>
+                <span>Overal Accuracy: </span>
+                <p>1985 Classification = 79%,   1995 Classification = 76%, 2015 Classification = 68%,  2021 Classification = 74%</p>
+                <a href="Images/classified.jpg" target="_blank" class="btn">View</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="box-container">
+        <div class="box">
+            <div class="image">
+                <img src="Images/changeAnalysis.jpg" alt="">
+            </div>
+            <div class="content">
+                <a href="#" class="title">Change Analysis</a>
+                <span> </span>
+                <p> Figure shows the calculated change between the classified images, we can see that there is a high change for Agriculture and Cultivation due to the change of production between the years. The range between 1995 to 2015 signifies the significance change in the LULC in the study region.  </p>
+                <a href="Images/changeAnalysis.jpg" target="_blank" class="btn">View</a>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="image">
+                <img src="Images/pixelcount.JPG" alt="">
+            </div>
+            <div class="content">
+                <a href="#" class="title">Classified Image</a>
+                <span> </span>
+                <p> The simplified change analysis by arranging the number of pixels per class per year as shown in the Table. Table shows the number of pixels classified according to each class; therefore, the accuracy of the change depends on the accuracy of the model performed by the user. Water has many pixels classified in all years and soil has minimum pixels classified for all years.</p>
+               
+                <a href="Images//pixelcount.JPG" target="_blank" class="btn">View</a>
+            </div>
+        </div>
+    </div>
+
+
+</section>
+
+
+
+<!-- blogs section ends -->
+
+<!-- footer section starts  -->
+
+<section class="footer">
+
+    
+    <div class="credit">created by <span>Doctor Shandu: 218213654 </span>| idcossa@gmail.com | GIS Industrial Project</div>
+
+</section>
+
+<!-- footer section ends -->
+
+
+
+
+
+
+
+<!-- custom js file link  -->
+<script src="js/script.js"></script>
+
+</body>
+</html>
